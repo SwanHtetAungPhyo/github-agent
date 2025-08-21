@@ -1,7 +1,7 @@
 import { Mastra } from "@mastra/core/mastra";
 import { PinoLogger } from "@mastra/loggers";
 import { storage } from "./memory/memory";
-import { middlwares } from "../middleware/middleware"; 
+import { middlwares } from "../middleware/middleware";
 import { mainAgent } from "./agents/weather-agent";
 import { githubCallbackController, githubLoginController, githubLogoutController } from "../github/github.controller";
 import { Context } from "hono";
@@ -9,20 +9,22 @@ import { Session } from "../middleware/session";
 import { registerApiRoute } from "@mastra/core/server";
 import { RuntimeContext } from "@mastra/core/di";
 import { z } from "zod";
+
 const chatRequestSchema = z.object({
   message: z.string().describe("The user's message/question"),
   threadId: z.string().optional().describe("Optional existing thread ID to continue conversation"),
 });
+
 export const mastra = new Mastra({
   agents: { mainAgent },
-  storage: storage, 
+  storage: storage,
   server: {
     port: 3000,
     host: "0.0.0.0",
     build: {
       swaggerUI: true,
     },
-    middleware: middlwares, 
+    middleware: middlwares,
     cors: {
       origin: ["http://localhost:3000", "http://localhost:3001"],
       credentials: true,
@@ -66,7 +68,7 @@ export const mastra = new Mastra({
           return c.json({
             status: 'ok',
             timestamp: new Date().toISOString()
-          })
+          });
         }
       }),
       registerApiRoute("/chat", {
@@ -95,7 +97,7 @@ export const mastra = new Mastra({
                       isAuthenticated: session.get("isAuthenticated"),
                     },
                   },
-                  401,
+                  401
               );
             }
             runtimeContext.set("githubToken", authToken);
