@@ -2,7 +2,7 @@ import { Mastra } from "@mastra/core/mastra";
 import { PinoLogger } from "@mastra/loggers";
 import { storage } from "./memory/memory";
 import { middlwares } from "../middleware/middleware";
-import { mainAgent } from "./agents/weather-agent";
+import { mainAgent } from "./agents/githubagent";
 import { githubCallbackController, githubLoginController, githubLogoutController } from "../github/github.controller";
 import { Context } from "hono";
 import { Session } from "../middleware/session";

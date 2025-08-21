@@ -113,7 +113,7 @@ ResearchAssistant/
 │   │   ├── memory.ts          # Main memory configuration
 │   │   └── init-db.ts         # TypeScript initialization
 │   └── agents/
-│       └── weather-agent.ts   # Agent with memory integration
+│       └── githubagent.ts   # Agent with memory integration
 ├── scripts/
 │   └── init-db.js             # JavaScript initialization script
 ├── mastra.db                  # SQLite database file (auto-generated)
