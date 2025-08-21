@@ -1,0 +1,27 @@
+# GitHub Agent with Mastra
+
+
+## Env for BE 
+
+
+# API Keys
+GROQ_API_KEY=your_groq_api_key_here
+
+# Redis
+REDIS_URL=redis://default:your_redis_password@your_redis_host:your_redis_port
+
+# GitHub OAuth Configuration
+GITHUB_REDIRECT_URI=http://localhost:3000/auth/github/callback
+GITHUB_SCOPE=repo user:email
+GITHUB_AUTHORIZER_URL=https://github.com/login/oauth/authorize
+GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+
+# PostgreSQL
+POSTGRES_HOST=your_postgres_host
+POSTGRES_USER=your_postgres_user
+POSTGRES_PASSWORD=your_postgres_password
+POSTGRES_DATABASE=your_postgres_database
+
+# App
