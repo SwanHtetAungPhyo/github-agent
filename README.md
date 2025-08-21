@@ -46,7 +46,7 @@ This agent provides **advanced repository management capabilities** such as issu
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/yourusername/github-agent-mastra.git
+git clone https://github.com/SwanHtetAungPhyo/github-agent.git
 cd github-agent-mastra
 npm install
 ```
