@@ -1,0 +1,47 @@
+{
+  "name": "rag-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mastra dev",
+    "build": "mastra build",
+    "start": "mastra start",
+    "format": "exec prettier . --write",
+    "commit": "cz-customizable",
+    "init-db": "node scripts/init-db.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "dependencies": {
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.4.0",
+    "@ai-sdk/groq": "^1.2.9",
+    "@mastra/core": "^0.13.2",
+    "@mastra/libsql": "^0.13.2",
+    "@mastra/loggers": "^0.10.6",
+    "@mastra/memory": "^0.12.2",
+    "@mastra/pg": "^0.14.0",
+    "@octokit/rest": "^22.0.0",
+    "@types/winston": "^2.4.4",
+    "axios": "^1.11.0",
+    "crypto": "^1.0.1",
+    "hono": "^4.9.2",
+    "redis": "^5.8.2",
+    "winston": "^3.17.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "mastra": "^0.10.21",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.2"
+  }
+}

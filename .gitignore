@@ -1,0 +1,4 @@
+.idea
+assistant/node_modules
+githubAgentBE/.env.local
+githubAgentBE/node_modules
